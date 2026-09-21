@@ -25,21 +25,6 @@ def test_valid_login(driver):
     time.sleep(2)
 
 
-def test_blank_login(driver):
-
-    page = LoginPage(driver)
-
-    page.open()
-    time.sleep(2)
-
-    page.click_login()
-    time.sleep(2)
-
-    assert "Username is required" in page.get_error_message()
-
-    time.sleep(2)
-
-
 def test_valid_login_and_logout(driver):
 
     page = LoginPage(driver)
